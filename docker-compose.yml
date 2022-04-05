@@ -1,0 +1,22 @@
+version: "3"
+services:
+  node-app:
+    environment:
+      - PORT=3000
+    depends_on:
+      - mongo
+  nginx:
+    image: nginx:stable-alpine
+    ports:
+        - "3000:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+  mongo:
+    image: mongo
+    volumes:
+      - mongo-db:/data/db
+  redis:
+    image: redis
+volumes:
+  mongo-db:
+
