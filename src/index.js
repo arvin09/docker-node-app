@@ -17,7 +17,14 @@ const {
   SESSION_SECRET,
 } = require("../config");
 
+console.log('MONGO_USER', MONGO_USER);
+console.log('MONGO_PASSWORD', MONGO_PASSWORD);
+console.log('MONGO_IP', MONGO_IP);
+console.log('MONGO_PORT', MONGO_PORT);
+
 const mongoUrl = `mongodb://${MONGO_USER}:${MONGO_PASSWORD}@${MONGO_IP}:${MONGO_PORT}/?authSource=admin`;
+
+console.log('mongoUrl', mongoUrl);
 
 const connectWithRetry = () => {
   mongoose
