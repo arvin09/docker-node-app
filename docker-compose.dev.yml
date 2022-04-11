@@ -21,3 +21,4 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=arvin
       - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=test

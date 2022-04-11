@@ -1,6 +1,7 @@
 version: "3"
 services:
   node-app:
+    image: arvin09/node-app
     environment:
       - PORT=3000
     depends_on:
