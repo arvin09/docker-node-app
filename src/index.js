@@ -61,7 +61,7 @@ app.use(session({
   cookie: {
       secure: false, // if true only transmit cookie over https
       httpOnly: true, // if true prevent client side JS from reading the cookie 
-      maxAge: 30000 // session max age in miliseconds
+      maxAge: 300000 // session max age in miliseconds
   }
 }))
 
@@ -69,7 +69,7 @@ const postRouter = require("../routes/postRoutes");
 const userRouter = require("../routes/userRoutes");
 
 app.get("/api/v1", (req, res) => {
-  res.json({ message: "Docker is easy Arvin!! Lets start the journey" });
+  res.json({ message: "Docker is easy Arvin!! Journey has started !!! });
   console.log("Yeah it ran");
 });
 
